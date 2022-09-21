@@ -18,26 +18,30 @@
           sans-serif;
       }
       .navbar {
-        width: 100vw;
+        width: 100%;
         height: 8vh;
         background-color: black;
         position: sticky;
         top: 0;
+        z-index: 2;
       }
       .flex {
         display: flex;
       }
       .section {
+        /* background: url("https://wallpapercave.com/wp/wp10616085.jpg") no-repeat; */
+        background-size: cover;
+
         min-height: 20vh;
-        width: auto;
-        margin: 25px;
-        background: rgba(255, 255, 255, 0.4);
+        max-width: 80%;
+        margin: 25px auto;
+        /* background: rgba(255, 255, 255, 0.2); */
         border: 1px solid white;
         border-radius: 5px;
         box-shadow: 5px 5px 20px;
       }
       .wrapper {
-        width: 100vw;
+        width: 100%;
         height: 100%;
         padding: 10px 0px;
         background: linear-gradient(228deg, #800df0, #0dd0f0, #cdf00d, #f00d0d);
@@ -93,19 +97,136 @@
           background-position: 0% 32%;
         }
       }
+      @media screen and (max-width: 636px) {
+        .p {
+          width: 100% !important;
+        }
+        .secbody {
+          flex-direction: column;
+        }
+        .words {
+          margin: 20px auto;
+          width: 90% !important;
+          position: relative !important;
+        }
+        .iflex {
+          flex-direction: column;
+        }
+        .btn {
+          margin: 10px 0 !important;
+        }
+      }
+      .grad {
+        background: linear-gradient(
+          119deg,
+          #000000,
+          #ff0000,
+          #ffffff,
+          #ff0000,
+          #000000,
+          #ff0000,
+          #ffffff,
+          #ff0000,
+          #000000
+        );
+        background-size: 1800% 1800%;
+
+        -webkit-animation: AnimationName 60s ease infinite;
+        -moz-animation: AnimationName 60s ease infinite;
+        animation: AnimationName 60s ease infinite;
+      }
+
+      @-webkit-keyframes AnimationName {
+        0% {
+          background-position: 0% 81%;
+        }
+        50% {
+          background-position: 100% 20%;
+        }
+        100% {
+          background-position: 0% 81%;
+        }
+      }
+      @-moz-keyframes AnimationName {
+        0% {
+          background-position: 0% 81%;
+        }
+        50% {
+          background-position: 100% 20%;
+        }
+        100% {
+          background-position: 0% 81%;
+        }
+      }
+      @keyframes AnimationName {
+        0% {
+          background-position: 0% 81%;
+        }
+        50% {
+          background-position: 100% 20%;
+        }
+        100% {
+          background-position: 0% 81%;
+        }
+      }
       .head {
         text-align: center;
         margin: 10px 0px;
+        height: 20%;
+      }
+      .secbody {
+        height: 80%;
+        padding: 10px;
+        align-items: center;
       }
       .image {
         width: 30%;
+        position: relative;
+        left: 0px;
       }
       .words {
         width: 70%;
+        right: 10px;
+        text-align: justify;
+        justify-content: center;
+        align-items: center;
       }
-      #img {
+      .img {
         width: 100%;
         height: 100%;
+      }
+      .iflex {
+        display: inline-flex;
+      }
+      .breaker {
+        width: 95%;
+        margin: 10px auto 20px;
+      }
+      .p {
+        width: inherit;
+      }
+      .btn {
+        position: relative;
+        margin: 0px 0px 5px 25px;
+      }
+      .visit {
+        background-color: rgba(68, 94, 85, 0);
+        color: black;
+        width: 60px;
+        height: 40px;
+        border: 1px solid black;
+      }
+      .hid {
+        display: none !important;
+      }
+      .foot {
+        background-color: #000000;
+        position: relative;
+        bottom: 0;
+        height: 8vh;
+        color: white;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
@@ -117,25 +238,144 @@
       <div class="section">
         <div class="intro">
           <div class="head"><h2>Check out some of my projects</h2></div>
-          <div class="image flex">
-            <img
-              id="img"
-              src="https://wallpapercave.com/wp/wp10616085.jpg"
-              alt="img"
-              srcset=""
-            />
-          </div>
-          <div class="words flex">
-            <p>
-              I have been developing for quite a while now. Everything I have
-              made will be live through this site. I will continue to add
-              Everything I make in future.
-            </p>
+          <hr class="breaker" />
+          <div class="secbody flex">
+            <div class="image iflex">
+              <img
+                class="img"
+                src="https://wallpapercave.com/wp/wp10616085.jpg"
+                alt="img"
+                srcset=""
+              />
+            </div>
+            <div class="words iflex">
+              <p class="p">
+                I have been developing for quite a while now. Everything I have
+                made will be live through this site. I will continue to add
+                Everything I make in future.
+              </p>
+              <div class="btn grad hid">
+                <button class="visit">Visit</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="section"></div>
-      <div class="section"></div>
+      <div class="section">
+        <div class="intro">
+          <div class="head"><h2>The Calculator</h2></div>
+          <hr class="breaker" />
+          <div class="secbody flex">
+            <div class="image iflex">
+              <img
+                class="img"
+                src="https://wallpapercave.com/wp/wp10616085.jpg"
+                alt="img"
+                srcset=""
+              />
+            </div>
+            <div class="words iflex">
+              <p class="p">
+                Everyone makes it, so I made one too. It's a simple Calculator
+                but with some additional options like dark mode and a notebook
+                that will save all the calculations as history in local storage
+                of device.
+              </p>
+              <div class="btn grad">
+                <button class="visit">Visit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="intro">
+          <div class="head"><h2>A 3D world with a moving character</h2></div>
+          <hr class="breaker" />
+          <div class="secbody flex">
+            <div class="image iflex">
+              <img
+                class="img"
+                src="https://wallpapercave.com/wp/wp10616085.jpg"
+                alt="img"
+                srcset=""
+              />
+            </div>
+            <div class="words iflex">
+              <p class="p">
+                This was a project that took lots of learning and understanding
+                of how 3d works. From matrices to vectors, it was a long run.
+                The 3D engine used here is
+                <a href="http://threejs.org">three.js</a> which simulates a 3d
+                world in browser using javascript. Also to add physics to the
+                world I used cannon-es, a physics engine written in JS. Other
+                libraries I used are Three-to-cannon and hammer.js.
+              </p>
+              <div class="btn grad">
+                <button class="visit">Visit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="intro">
+          <div class="head"><h2>A LUDO game using Javascript</h2></div>
+          <hr class="breaker" />
+          <div class="secbody flex">
+            <div class="image iflex">
+              <img
+                class="img"
+                src="https://wallpapercave.com/wp/wp10616085.jpg"
+                alt="img"
+                srcset=""
+              />
+            </div>
+            <div class="words iflex">
+              <p class="p">
+                I used pure HTML, CSS and JAVASCRIPT to make this game of ludo.
+                Its not made on html canvas, instead i simulated it using gtml
+                divs and js. So its now working perfectly right now, and it kind
+                of breaks on mobile.
+              </p>
+              <div class="btn grad">
+                <button class="visit">Visit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="intro">
+          <div class="head"><h2>An endless SNAKE game</h2></div>
+          <hr class="breaker" />
+          <div class="secbody flex">
+            <div class="image iflex">
+              <img
+                class="img"
+                src="https://wallpapercave.com/wp/wp10616085.jpg"
+                alt="img"
+                srcset=""
+              />
+            </div>
+            <div class="words iflex">
+              <p class="p">
+                Okay so this was also one of my early projects when I wasn't as
+                good as in Javascript as now. So this has a bug that the snake
+                thing never grows.
+              </p>
+              <div class="btn grad">
+                <button class="visit">Visit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <footer>
+      <div class="foot flex">
+        <h4>@No copyright yet</h4>
+      </div>
+    </footer>
   </body>
 </html>
