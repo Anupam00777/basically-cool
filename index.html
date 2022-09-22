@@ -35,7 +35,7 @@
         min-height: 20vh;
         max-width: 80%;
         margin: 25px auto;
-        /* background: rgba(255, 255, 255, 0.2); */
+        background: rgba(255, 255, 255, 0.4);
         border: 1px solid white;
         border-radius: 5px;
         box-shadow: 5px 5px 20px;
@@ -44,59 +44,56 @@
         width: 100%;
         height: 100%;
         padding: 10px 0px;
-        background: linear-gradient(228deg, #800df0, #0dd0f0, #cdf00d, #f00d0d);
-        background-size: 800% 800%;
 
-        -webkit-animation: GradientAnimation 18s ease infinite;
-        -moz-animation: GradientAnimation 18s ease infinite;
-        -o-animation: GradientAnimation 18s ease infinite;
-        animation: GradientAnimation 18s ease infinite;
+        background: linear-gradient(
+          270deg,
+          #ff0000,
+          #00ffe6,
+          #27f800,
+          #00f89e,
+          #ff00c2
+        );
+        background-size: 1000% 1000%;
+
+        -webkit-animation: g2 30s ease infinite;
+        -moz-animation: g2 30s ease infinite;
+        animation: g2 30s ease infinite;
       }
 
-      @-webkit-keyframes GradientAnimation {
+      @-webkit-keyframes g2 {
         0% {
-          background-position: 0% 32%;
+          background-position: 0% 50%;
         }
         50% {
-          background-position: 100% 69%;
+          background-position: 100% 50%;
         }
         100% {
-          background-position: 0% 32%;
+          background-position: 0% 50%;
         }
       }
-      @-moz-keyframes GradientAnimation {
+      @-moz-keyframes g2 {
         0% {
-          background-position: 0% 32%;
+          background-position: 0% 50%;
         }
         50% {
-          background-position: 100% 69%;
+          background-position: 100% 50%;
         }
         100% {
-          background-position: 0% 32%;
+          background-position: 0% 50%;
         }
       }
-      @-o-keyframes GradientAnimation {
+      @keyframes g2 {
         0% {
-          background-position: 0% 32%;
+          background-position: 0% 50%;
         }
         50% {
-          background-position: 100% 69%;
+          background-position: 100% 50%;
         }
         100% {
-          background-position: 0% 32%;
+          background-position: 0% 50%;
         }
       }
-      @keyframes GradientAnimation {
-        0% {
-          background-position: 0% 32%;
-        }
-        50% {
-          background-position: 100% 69%;
-        }
-        100% {
-          background-position: 0% 32%;
-        }
-      }
+
       @media screen and (max-width: 636px) {
         .p {
           width: 100% !important;
@@ -118,55 +115,52 @@
       }
       .grad {
         background: linear-gradient(
-          119deg,
-          #000000,
-          #ff0000,
+          270deg,
           #ffffff,
-          #ff0000,
-          #000000,
-          #ff0000,
-          #ffffff,
-          #ff0000,
-          #000000
+          #00ffe6,
+          #dc00f8,
+          #f80000,
+          #ffffff
         );
-        background-size: 1800% 1800%;
+        background-size: 1000% 1000%;
 
-        -webkit-animation: AnimationName 60s ease infinite;
-        -moz-animation: AnimationName 60s ease infinite;
-        animation: AnimationName 60s ease infinite;
+        -webkit-animation: g1 30s ease infinite;
+        -moz-animation: g1 30s ease infinite;
+        -o-animation: g1 30s ease infinite;
+        animation: g1 30s ease infinite;
       }
 
-      @-webkit-keyframes AnimationName {
+      @-webkit-keyframes g1 {
         0% {
-          background-position: 0% 81%;
+          background-position: 0% 50%;
         }
         50% {
-          background-position: 100% 20%;
+          background-position: 100% 50%;
         }
         100% {
-          background-position: 0% 81%;
+          background-position: 0% 50%;
         }
       }
-      @-moz-keyframes AnimationName {
+      @-moz-keyframes g1 {
         0% {
-          background-position: 0% 81%;
+          background-position: 0% 50%;
         }
         50% {
-          background-position: 100% 20%;
+          background-position: 100% 50%;
         }
         100% {
-          background-position: 0% 81%;
+          background-position: 0% 50%;
         }
       }
-      @keyframes AnimationName {
+      @keyframes g1 {
         0% {
-          background-position: 0% 81%;
+          background-position: 0% 50%;
         }
         50% {
-          background-position: 100% 20%;
+          background-position: 100% 50%;
         }
         100% {
-          background-position: 0% 81%;
+          background-position: 0% 50%;
         }
       }
       .head {
@@ -228,12 +222,35 @@
         justify-content: center;
         align-items: center;
       }
+      .nav-list {
+        list-style: none;
+        margin: 0px 10px;
+      }
+      .me {
+        align-items: center;
+        height: 100%;
+      }
+      .anav {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
     <div class="navbar">
-      <div class="me"></div>
+      <div class="me flex">
+        <nav>
+          <ul class="nav-ul flex">
+            <li class="nav-list"><a class="anav" href="#">Home</a></li>
+            <li class="nav-list"><a class="anav" href="#">About</a></li>
+            <li class="nav-list"><a class="anav" href="#">Contact</a></li>
+            <li class="nav-list"><a class="anav" href="#">Suggest</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
+
     <div class="wrapper">
       <div class="section">
         <div class="intro">
