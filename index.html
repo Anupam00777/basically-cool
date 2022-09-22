@@ -95,9 +95,11 @@
       }
 
       @media screen and (max-width: 636px) {
-        .p {
+        .p,
+        .maintext {
           width: 100% !important;
         }
+        .top,
         .secbody {
           flex-direction: column;
         }
@@ -111,6 +113,16 @@
         }
         .btn {
           margin: 10px 0 !important;
+        }
+        .top {
+          align-items: center;
+        }
+        .imagemain {
+          height: 70vw !important;
+          width: 70% !important;
+        }
+        .maintext {
+          height: 30% !important;
         }
       }
       .grad {
@@ -204,6 +216,7 @@
         margin: 0px 0px 5px 25px;
       }
       .visit {
+        cursor: pointer;
         background-color: rgba(68, 94, 85, 0);
         color: black;
         width: 60px;
@@ -235,6 +248,46 @@
         text-decoration: none;
         cursor: pointer;
       }
+      .main {
+        width: 95vw;
+        margin: 0 auto;
+        background-color: rgb(255, 255, 255);
+      }
+      .mainbody {
+        margin: 0px auto;
+        width: 95%;
+      }
+      .top {
+        width: 95%;
+        margin: 10px auto;
+        height: 50vw;
+        min-height: 40vh;
+        max-height: 60vh;
+      }
+      .bottom {
+        width: 95%;
+        margin: 10px auto;
+        height: 50vw;
+        min-height: 40vh;
+        max-height: 60vh;
+      }
+      .imagemain {
+        height: 100%;
+        width: 30vw;
+        position: relative;
+        left: 2px;
+      }
+      #mainimg {
+        height: 100%;
+        width: 100%;
+      }
+      .maintext {
+        width: 50%;
+        position: relative;
+        height: 100%;
+        margin: 0px auto;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
@@ -245,13 +298,38 @@
             <li class="nav-list"><a class="anav" href="#">Home</a></li>
             <li class="nav-list"><a class="anav" href="#">About</a></li>
             <li class="nav-list"><a class="anav" href="#">Contact</a></li>
-            <li class="nav-list"><a class="anav" href="#">Suggest</a></li>
           </ul>
         </nav>
       </div>
     </div>
 
     <div class="wrapper">
+      <div class="main">
+        <div class="mainbody">
+          <div class="head"><h1>Hello World</h1></div>
+          <hr class="breaker" />
+          <div class="top flex">
+            <div class="imagemain">
+              <img
+                src="https://source.unsplash.com/600x999/?computer,keyboard,screen,monitor,hacker,coding"
+                alt=""
+                id="mainimg"
+              />
+            </div>
+            <div class="maintext flex">
+              <p>
+                Hi. I am Anupam Pandey and this is my website I made to showcase
+                my work. Alot of these are still not fully perfect but will make
+                them better soon.
+              </p>
+            </div>
+          </div>
+          <!-- <div class="bottom"></div> -->
+        </div>
+      </div>
+      <hr class="breaker" />
+      <hr class="breaker" />
+      <hr class="breaker" />
       <div class="section">
         <div class="intro">
           <div class="head"><h2>Check out some of my projects</h2></div>
@@ -286,7 +364,7 @@
             <div class="image iflex">
               <img
                 class="img"
-                src="https://wallpapercave.com/wp/wp10616085.jpg"
+                src="https://source.unsplash.com/500x500/?calculator"
                 alt="img"
                 srcset=""
               />
@@ -313,7 +391,7 @@
             <div class="image iflex">
               <img
                 class="img"
-                src="https://wallpapercave.com/wp/wp10616085.jpg"
+                src="https://source.unsplash.com/500x800/?3d,game"
                 alt="img"
                 srcset=""
               />
@@ -343,7 +421,7 @@
             <div class="image iflex">
               <img
                 class="img"
-                src="https://wallpapercave.com/wp/wp10616085.jpg"
+                src="https://source.unsplash.com/500x600/?ludo"
                 alt="img"
                 srcset=""
               />
@@ -370,7 +448,7 @@
             <div class="image iflex">
               <img
                 class="img"
-                src="https://wallpapercave.com/wp/wp10616085.jpg"
+                src="https://source.unsplash.com/500x500/?game"
                 alt="img"
                 srcset=""
               />
@@ -395,4 +473,19 @@
       </div>
     </footer>
   </body>
+  <script>
+    function onload() {
+      const image = document.getElementById("mainimg");
+      const imgcont = document.getElementsByClassName("imagemain")[0];
+      let src =
+        "https://source.unsplash.com/" +
+        imgcont.scrollWidth +
+        "x" +
+        imgcont.scrollHeight +
+        "/?computer,keyboard,screen,monitor,hacker,coding";
+      image.src = src;
+    }
+    window.onload(() => onload());
+    window.addEventListener("resize", () => onload());
+  </script>
 </html>
