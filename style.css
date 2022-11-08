@@ -235,6 +235,13 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.nodec,
+.nodec:active {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
 .main {
   min-height: -moz-max-content;
   min-height: max-content;
